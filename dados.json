@@ -1,0 +1,44 @@
+[
+    {
+        "categoria":"Drama",
+        "filmes":[
+            {
+                "titulo":"O Poderoso Chefão (1972)",
+                "sinopse":" O patriarca idoso de uma dinastia do crime organizado transfere o controle de seu império clandestino para seu filho relutante.",
+                "imagem":"img/filme_001.jpg",
+                "url_assistir":"https://www.youtube.com/watch?v=w5zQKsbp0ks",
+                "html_ficha":"<p> Director: Francis Ford Coppola</p><p> Stars: Marlon Brando | Al Pacino | James Caan</p> <p> IMDb: 9.2/10</p>"
+            },
+            {
+                "titulo":"Clube da Luta (1999)",
+                "sinopse":" Um trabalhador de escritório e um fabricante de sabonetes que cuidam do diabo formam um clube de luta clandestino que evolui para algo muito maior.",
+                "imagem":"img/filme_002.jpg",
+                "url_assistir":"https://play.google.com/store/movies/details/Fight_Club_Clube_da_Luta_LEG?id=GGgmCKpc5KA",
+                "html_ficha":"<p> Director: David Fincher</p><p> Stars: Brad Pitt | Edward Norton </p> <p> IMDb: 8.8/10</p>"
+            }                    
+        ]
+    },
+    {
+        "categoria":"Terror",
+        "filmes":[
+            {
+                "titulo":"O Silêncio dos Inocentes",
+                "sinopse":" Uma jovem deve receber a ajuda de um assassino canibal manipulador e preso para ajudar a capturar outro assassino em série, um louco que ataca suas vítimas.",
+                "imagem":"img/filme_003.jpg",
+                "url_assistir":"https://play.google.com/store/movies/details/The_Silence_of_the_Lambs?id=ayA38BR2OTE&hl=pt_BR&gl=US",
+                "html_ficha":"<p> Director: Jonathan Demme</p><p> Stars: Jodie Foster | Anthony Hopkins</p> <p> IMDb: 8.6/10</p>"
+            },
+            {
+                "titulo":"O Iluminado (1981)",
+                "sinopse":" Uma família se dirige a um hotel isolado para o inverno, onde uma presença sinistra influencia a violência do pai, enquanto seu filho psíquico vê presságios horríveis do passado e do futuro.",
+                "imagem":"img/filme_004.jpg",
+                "url_assistir":"https://play.google.com/store/movies/details/The_Shining?id=yQCwI6JVPKo.P&hl=pt_BR&gl=US",
+                "html_ficha":"<p> Director: Stanley Kubrick</p><p> Stars: Jack Nicholson | Shelley Duvall</p> <p> IMDb: 8.4/10</p>"
+            }                       
+        ]
+    },
+    {
+        "categoria":"Romance",
+        "filmes":[]
+    }    
+]

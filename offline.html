@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="manifest.json" rel="manifest">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+
+    <!-- iOS meta tags and icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="iMOVIES">
+    <link rel="apple-touch-icon" href="icons/152.png">
+
+    <meta name="description" content="App de venda de filmes">
+    <meta name="theme-color" content="#3b5cc9" />    
+
+    <title>iMOVIES</title>
+  </head>
+  <body>
+    
+    <!--INICIO - Modal de Ficha do Filme-->
+
+    <div class="modal fade" id="fichaFilme" tabindex="-1" aria-labelledby="fichaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"><strong>Filme:</strong> <span id="tituloFilme">xxx</span></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="corpoModal">
+  
+            </div>
+            <div class="modal-footer">
+              <a href="#" target="_blank" class="btn btn-warning" id="btAssistirModal">Assistir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--FIM - Modal de Ficha do Filme-->
+
+    <header class="container-fluid fixed-top">
+        <img src="img/logo.png" class="logo">
+    </header>
+
+    <main class="container">
+
+        <div class="alert alert-warning" role="alert" style="min-height: 100px;">
+            <img src="img/offline.png" width="64" style="float: left;">Você está acessando a versão offline desta aplicação. Conecte a internet para atualizar os dados.
+        </div>
+
+        <div class="row" id="conteudo">
+
+
+        </div>
+
+
+    </main>
+
+    <footer class="container-fluid fixed-bottom">
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+//Carregar dados dos filmes (AJAX)
+
+var ajax = new XMLHttpRequest();
+
+ajax.open("GET", "./dados.json", true);
+
+ajax.send();
+
+ajax.onreadystatechange = function(){
+
+    var conteudo = document.getElementById("conteudo");
+
+    if(ajax.readyState == 4 && ajax.status == 200){
+
+        var data = ajax.responseText;
+
+        var data_json = JSON.parse(data);
+
+        //Caso não tenha filmes no JSON mostra uma mensagem
+        if(data_json.length == 0){
+
+            conteudo.innerHTML = '<div class="alert alert-warning" role="alert">Ainda não temos filmes nesta categoria!</div>';
+
+        //Tendo filmes, vamos processar a renderização
+        }else{
+
+            var html_conteudo = "";
+            
+            for(var i =0; i < data_json.length; i++)
+            {
+                html_conteudo += '<div class="col-12"><h2 class="categoria">'+data_json[i].categoria+'</h2></div>';
+
+                if(data_json[i].filmes.length == 0){
+
+                    html_conteudo += '<div class="col-lg-12"><div class="alert alert-warning" role="alert">Ainda não temos filmes nesta categoria!</div></div>';
+
+                }else{
+
+                    for(var j = 0; j < data_json[i].filmes.length; j++)
+                    {
+                        html_conteudo += card_filme(data_json[i].filmes[j].titulo,data_json[i].filmes[j].sinopse,data_json[i].filmes[j].imagem,data_json[i].filmes[j].url_assistir,data_json[i].filmes[j].html_ficha);
+                    }
+
+                }
+
+            }
+            conteudo.innerHTML = html_conteudo;
+        }
+
+    }
+
+}
+
+//Template Engine
+var card_filme = function (titulo, sinopse, imagem, url_assistir, html_ficha){
+
+    var html_modal = '<p><strong>Sinopse:</strong>'+sinopse+'</p><hr><p><strong>Ficha Técnica</strong></p>'+html_ficha;
+
+    var html ='<div class="col-lg-3 col-md-4 col-6 mb-3">'+
+                '<div class="card">'+
+                    '<img src="'+imagem+'" class="card-img-top" alt="Foto do filme">'+
+                    '<div class="card-body">'+
+                    '<h5 class="card-title">'+titulo+'</h5>'+
+                    '<div class="d-grid gap-2">'+
+                        '<a href="#" data-bs-toggle="modal" onClick="javascript:dadosModal(\''+titulo+'\',\''+html_modal+'\',\''+url_assistir+'\');" data-bs-target="#fichaFilme" class="btn btn-secondary btFicha">Ficha</a>'+
+                    '</div>'+
+                    '</div>'+
+                '</div>'+
+                '</div>';
+
+    return html;
+
+}
+
+//Alterar Modal
+
+var dadosModal = function(titulo, html_ficha, url_assistir){
+
+    var tituloHTML = document.getElementById("tituloFilme");
+    var corpoHTML = document.getElementById("corpoModal");
+    var btAssistirModal = document.getElementById("btAssistirModal");
+
+    tituloHTML.innerHTML = titulo;
+    corpoHTML.innerHTML = html_ficha;
+
+    btAssistirModal.setAttribute('href', url_assistir);
+
+}
+
+    </script>
+
+  </body>
+</html>
