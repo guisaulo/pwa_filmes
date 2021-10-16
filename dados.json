@@ -15,7 +15,21 @@
                 "imagem":"img/filme_002.jpg",
                 "url_assistir":"https://play.google.com/store/movies/details/Fight_Club_Clube_da_Luta_LEG?id=GGgmCKpc5KA",
                 "html_ficha":"<p> Director: David Fincher</p><p> Stars: Brad Pitt | Edward Norton </p> <p> IMDb: 8.8/10</p>"
-            }                    
+            },
+            {
+                "titulo":"Um Sonho de Liberdade",
+                "sinopse":" Dois homens presos se reúnem ao longo de vários anos, encontrando consolo e eventual redenção através de atos de decência comum.",
+                "imagem":"img/filme_003.jpg",
+                "url_assistir":"https://play.google.com/store/movies/details/Um_Sonho_De_Liberdade?id=o1axrUg2hlU&hl=pt_BR&gl=US",
+                "html_ficha":"<p> Director: Frank Darabont</p><p> Stars: Tim Robbins | Morgna Freeman </p> <p> IMDb: 9,3/10</p>"
+            },    
+            {
+                "titulo":"Interestelar (2014)      ",
+                "sinopse":" Uma equipe de exploradores viaja através de um buraco de minhoca no espaço, na tentativa de garantir a sobrevivência da humanidade.",
+                "imagem":"img/filme_004.jpg",
+                "url_assistir":"https://play.google.com/store/movies/details/Interstellar_LEG?id=LpdTsygor0A&hl=pt_BR&gl=US",
+                "html_ficha":"<p> Christopher Nolan</p><p> Stars: Matthew McConaughey | Anne Hathaway | Jessica Chastain </p> <p> IMDb: 8.6/10</p>"
+            }                                            
         ]
     },
     {
@@ -24,14 +38,14 @@
             {
                 "titulo":"O Silêncio dos Inocentes",
                 "sinopse":" Uma jovem deve receber a ajuda de um assassino canibal manipulador e preso para ajudar a capturar outro assassino em série, um louco que ataca suas vítimas.",
-                "imagem":"img/filme_003.jpg",
+                "imagem":"img/filme_005.jpg",
                 "url_assistir":"https://play.google.com/store/movies/details/The_Silence_of_the_Lambs?id=ayA38BR2OTE&hl=pt_BR&gl=US",
                 "html_ficha":"<p> Director: Jonathan Demme</p><p> Stars: Jodie Foster | Anthony Hopkins</p> <p> IMDb: 8.6/10</p>"
             },
             {
                 "titulo":"O Iluminado (1981)",
                 "sinopse":" Uma família se dirige a um hotel isolado para o inverno, onde uma presença sinistra influencia a violência do pai, enquanto seu filho psíquico vê presságios horríveis do passado e do futuro.",
-                "imagem":"img/filme_004.jpg",
+                "imagem":"img/filme_006.jpg",
                 "url_assistir":"https://play.google.com/store/movies/details/The_Shining?id=yQCwI6JVPKo.P&hl=pt_BR&gl=US",
                 "html_ficha":"<p> Director: Stanley Kubrick</p><p> Stars: Jack Nicholson | Shelley Duvall</p> <p> IMDb: 8.4/10</p>"
             }                       
