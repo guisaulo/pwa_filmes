@@ -40,7 +40,6 @@
   
             </div>
             <div class="modal-footer">
-              <a href="#" target="_blank" class="btn btn-warning" id="btAssistirModal">Assistir</a>
             </div>
           </div>
         </div>
@@ -137,7 +136,7 @@ var card_filme = function (titulo, sinopse, imagem, url_assistir, html_ficha){
                     '<div class="card-body">'+
                     '<h5 class="card-title">'+titulo+'</h5>'+
                     '<div class="d-grid gap-2">'+
-                        '<a href="#" data-bs-toggle="modal" onClick="javascript:dadosModal(\''+titulo+'\',\''+html_modal+'\',\''+url_assistir+'\');" data-bs-target="#fichaFilme" class="btn btn-secondary btFicha">Ficha</a>'+
+                        '<a href="#" data-bs-toggle="modal" onClick="javascript:dadosModal(\''+titulo+'\',\''+html_modal+'\',\''+url_assistir+'\');" data-bs-target="#fichaFilme" class="btn btn-warning btFicha">Ficha</a>'+
                     '</div>'+
                     '</div>'+
                 '</div>'+
@@ -153,13 +152,9 @@ var dadosModal = function(titulo, html_ficha, url_assistir){
 
     var tituloHTML = document.getElementById("tituloFilme");
     var corpoHTML = document.getElementById("corpoModal");
-    var btAssistirModal = document.getElementById("btAssistirModal");
 
     tituloHTML.innerHTML = titulo;
     corpoHTML.innerHTML = html_ficha;
-
-    btAssistirModal.setAttribute('href', url_assistir);
-
 }
 
     </script>

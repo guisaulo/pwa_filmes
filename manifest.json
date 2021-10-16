@@ -1,6 +1,6 @@
 {
-    "name": "iMOVIES",
-    "short_name": "iM",
+    "name": "iMovies",
+    "short_name": "iMovies",
     "icons": [{
       "src": "icons/128.png",
       "sizes": "128x128",
@@ -29,6 +29,6 @@
     }],
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#3b5cc9",
-    "theme_color": "#3b5cc9"
+    "background_color": "#363636",
+    "theme_color": "#363636"
   }
